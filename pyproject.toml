@@ -79,7 +79,8 @@ ignore_missing_imports = true
 testpaths = ["tests"]
 asyncio_mode = "auto"
 # removed --cov-report=xml since I'm not using CI coverage uploads locally
-addopts = "--cov=babeldoc --cov-report=term-missing"
+# added -v for more verbose output so I can see which tests pass/fail at a glance
+addopts = "--cov=babeldoc --cov-report=term-missing -v"
 
 [tool.coverage.run]
 source = ["babeldoc"]
