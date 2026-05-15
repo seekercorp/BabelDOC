@@ -60,7 +60,7 @@ Changelog = "https://github.com/babeldoc/babeldoc/releases"
 packages = ["babeldoc"]
 
 [tool.ruff]
-line-length = 88
+line-length = 100
 target-version = "py310"
 
 [tool.ruff.lint]
@@ -78,7 +78,8 @@ ignore_missing_imports = true
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 asyncio_mode = "auto"
-addopts = "--cov=babeldoc --cov-report=term-missing --cov-report=xml"
+# removed --cov-report=xml since I'm not using CI coverage uploads locally
+addopts = "--cov=babeldoc --cov-report=term-missing"
 
 [tool.coverage.run]
 source = ["babeldoc"]
