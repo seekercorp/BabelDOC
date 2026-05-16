@@ -80,7 +80,8 @@ testpaths = ["tests"]
 asyncio_mode = "auto"
 # removed --cov-report=xml since I'm not using CI coverage uploads locally
 # added -v for more verbose output so I can see which tests pass/fail at a glance
-addopts = "--cov=babeldoc --cov-report=term-missing -v"
+# added -x to stop on first failure — saves time when iterating locally
+addopts = "--cov=babeldoc --cov-report=term-missing -v -x"
 
 [tool.coverage.run]
 source = ["babeldoc"]
